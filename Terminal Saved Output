@@ -1,0 +1,191 @@
+Last login: Mon May 11 14:12:00 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+MICHAELs-MBP:~ michaelsawina$ Install Homebrew
+usage: install [-bCcpSsv] [-B suffix] [-f flags] [-g group] [-m mode]
+               [-o owner] file1 file2
+       install [-bCcpSsv] [-B suffix] [-f flags] [-g group] [-m mode]
+               [-o owner] file1 ... fileN directory
+       install -d [-v] [-g group] [-m mode] [-o owner] directory ...
+MICHAELs-MBP:~ michaelsawina$ 
+MICHAELs-MBP:~ michaelsawina$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+==> This script will install:
+/usr/local/bin/brew
+/usr/local/share/doc/homebrew
+/usr/local/share/man/man1/brew.1
+/usr/local/share/zsh/site-functions/_brew
+/usr/local/etc/bash_completion.d/brew
+/usr/local/Homebrew
+==> The following new directories will be created:
+/usr/local/bin
+/usr/local/etc
+/usr/local/include
+/usr/local/lib
+/usr/local/sbin
+/usr/local/share
+/usr/local/var
+/usr/local/opt
+/usr/local/share/zsh
+/usr/local/share/zsh/site-functions
+/usr/local/var/homebrew
+/usr/local/var/homebrew/linked
+/usr/local/Cellar
+/usr/local/Caskroom
+/usr/local/Homebrew
+/usr/local/Frameworks
+==> The Xcode Command Line Tools will be installed.
+
+Press RETURN to continue or any other key to abort
+Password:
+Sorry, try again.
+Password:
+Sorry, try again.
+Password:
+Need sudo access on macOS!
+MICHAELs-MBP:~ michaelsawina$ sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+curl: (6) Could not resolve host: raw.githubusercontent.com
+Password:
+Sorry, try again.
+Password:
+MICHAELs-MBP:~ michaelsawina$ brew install node
+-bash: brew: command not found
+MICHAELs-MBP:~ michaelsawina$ npm --version
+6.14.4
+MICHAELs-MBP:~ michaelsawina$ cd Desktop/Reversi_final
+MICHAELs-MBP:Reversi_final michaelsawina$ ls -aid .*
+8614318148 .		8614318214 .git
+    589267 ..		8614318317 .gitignore
+MICHAELs-MBP:Reversi_final michaelsawina$ clear
+
+MICHAELs-MBP:Reversi_final michaelsawina$ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (reversi_final) 
+version: (1.0.0) 
+description: This is the game of reversi
+entry point: (index.js) server.js
+test command: 
+git repository: (https://github.com/msawina/reversi.git) 
+keywords: reversi
+author: Michael Sawina
+license: (ISC) GPL 3.0
+Sorry, license should be a valid SPDX license expression (without "LicenseRef"), "UNLICENSED", or "SEE LICENSE IN <filename>" and license is similar to the valid expression "GPL-3.0-or-later".
+license: (ISC) GPL-3.0
+About to write to /Users/michaelsawina/Desktop/Reversi_final/package.json:
+
+{
+  "name": "reversi_final",
+  "version": "1.0.0",
+  "description": "This is the game of reversi",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msawina/reversi.git"
+  },
+  "keywords": [
+    "reversi"
+  ],
+  "author": "Michael Sawina",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/msawina/reversi/issues"
+  },
+  "homepage": "https://github.com/msawina/reversi#readme"
+}
+
+
+Is this OK? (yes) 
+MICHAELs-MBP:Reversi_final michaelsawina$ ls
+package.json
+MICHAELs-MBP:Reversi_final michaelsawina$ npm install socket.io --save
+npm notice created a lockfile as package-lock.json. You should commit this file.
++ socket.io@2.3.0
+added 41 packages from 33 contributors and audited 76 packages in 4.342s
+found 0 vulnerabilities
+
+MICHAELs-MBP:Reversi_final michaelsawina$ npm install node-static --save
++ node-static@0.7.11
+added 6 packages from 8 contributors and audited 82 packages in 1.678s
+found 1 low severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+MICHAELs-MBP:Reversi_final michaelsawina$ ls
+node_modules		package-lock.json	package.json
+MICHAELs-MBP:Reversi_final michaelsawina$ node server.js
+gvim server.js
+node server.js
+ls
+node server.js
+
+^C
+MICHAELs-MBP:Reversi_final michaelsawina$ node server.js
+The server is running
+mkdir public 
+^C
+MICHAELs-MBP:Reversi_final michaelsawina$ gvim index.html
+-bash: gvim: command not found
+MICHAELs-MBP:Reversi_final michaelsawina$ clear
+
+MICHAELs-MBP:Reversi_final michaelsawina$ cd ..
+MICHAELs-MBP:Desktop michaelsawina$ cd Reversi_final
+MICHAELs-MBP:Reversi_final michaelsawina$ node server.js
+The server is running
+/Users/michaelsawina/Desktop/Reversi_final/server.js:26
+				file.server(request,response);
+				     ^
+
+TypeError: file.server is not a function
+    at IncomingMessage.<anonymous> (/Users/michaelsawina/Desktop/Reversi_final/server.js:26:10)
+    at IncomingMessage.emit (events.js:322:22)
+    at endReadableNT (_stream_readable.js:1187:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+MICHAELs-MBP:Reversi_final michaelsawina$ node server.js
+The server is running
+/Users/michaelsawina/Desktop/Reversi_final/server.js:26
+				file.server(request,response);
+				     ^
+
+TypeError: file.server is not a function
+    at IncomingMessage.<anonymous> (/Users/michaelsawina/Desktop/Reversi_final/server.js:26:10)
+    at IncomingMessage.emit (events.js:322:22)
+    at endReadableNT (_stream_readable.js:1187:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+MICHAELs-MBP:Reversi_final michaelsawina$ node server.js
+The server is running
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
